@@ -1,0 +1,14 @@
+.navbar {
+  background-color: #222;
+  padding: 0.5rem;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}

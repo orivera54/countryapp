@@ -1,0 +1,20 @@
+<div class="form-container">
+  <input [(ngModel)]="username" placeholder="Usuario" />
+  <input type="number" [(ngModel)]="limit" placeholder="Cantidad" />
+  <button (click)="onSubmit()" [disabled]="loading">Buscar</button>
+</div>
+
+<div *ngIf="loading">Cargando...</div>
+
+<ul *ngIf="paginatedCountries.length">
+  <li *ngFor="let country of paginatedCountries">
+    {{ country.name }} – población: {{ country.population }} – área: {{ country.area }}
+  </li>
+</ul>
+
+<nav *ngIf="countries.length > maxPerPage">
+  <button *ngFor="let page of totalPages" (click)="setPage(page)">
+  {{ page }}
+</button>
+
+</nav>

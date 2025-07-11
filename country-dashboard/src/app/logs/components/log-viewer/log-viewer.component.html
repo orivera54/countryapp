@@ -1,0 +1,13 @@
+<h2>Registros de consulta</h2>
+
+<div *ngIf="loading">Cargando logs...</div>
+
+<ul *ngIf="logs.length">
+  <li *ngFor="let log of logs">
+    <strong>{{ log.username }}</strong> – {{ log.num_countries_returned }} países – {{ log.request_timestamp | date:'short' }}
+  </li>
+</ul>
+
+<div *ngIf="!loading && logs.length === 0">
+  No hay registros disponibles.
+</div>
