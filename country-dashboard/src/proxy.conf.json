@@ -1,11 +1,11 @@
 {
   "/graphql": {
-    "target": "http://localhost:8000",
+    "target": "https://countrybackend-9edy.onrender.com",
     "secure": false,
     "changeOrigin": true
   },
   "/api": {
-    "target": "http://localhost:8050",
+    "target": "https://countrylogservice.onrender.com",
     "secure": false,
     "changeOrigin": true
   }

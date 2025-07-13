@@ -29,7 +29,7 @@ export class CountryQueryComponent implements OnInit  {
     private logService: LogService
   ) {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.onSubmit();
   }
 
   get paginatedCountries(): Country[] {
@@ -60,11 +60,12 @@ export class CountryQueryComponent implements OnInit  {
         this.logService.saveLog(log).subscribe();
         this.loading = false;
       },
-      error: (err) => {
-        console.error('Error al consultar países', err);
-        alert('No se pudo obtener los países');
-        this.loading = false;
-      }
+     error: (err) => {
+  console.error('Error al consultar países', err);
+  alert(`No se pudo obtener los países.`);
+  this.loading = false;
+}
+
     });
   }
 
