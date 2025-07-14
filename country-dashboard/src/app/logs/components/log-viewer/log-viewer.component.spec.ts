@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogViewer } from './log-viewer.component';
+import { LogViewerComponent } from './log-viewer.component';
 
 describe('LogViewer', () => {
-  let component: LogViewer;
-  let fixture: ComponentFixture<LogViewer>;
+  let component: LogViewerComponent;
+  let fixture: ComponentFixture<LogViewerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LogViewer]
+      imports: [LogViewerComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LogViewer);
+    fixture = TestBed.createComponent(LogViewerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
