@@ -37,7 +37,9 @@ export class CountryService {
             if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
             return res.json();
       })
-      .then(data => data.data.countries);
+      //.then(data => data.data.countries);
+      .then(data => data.data.topDensityCountries);
+
 
       return from(request);
 
